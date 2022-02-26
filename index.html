@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <div class="general-info">
+          <div class="date-div">
+            <div class="img-div">
+              <img src="https://openweathermap.org/img/wn/03d.png" alt="" />
+              <h2>Rainy</h2>
+            </div>
+            <div class="date-info">
+              <h2>Today</h2>
+              <h3>Sat, 3 Aug</h3>
+            </div>
+          </div>
+          <div class="temp">28°C</div>
+          <div class="city">Berlin, Germany</div>
+        </div>
+        <div class="detail-info">
+          <h2 class="title">Weather Details</h2>
+          <div class="item">
+            <p class="item-title">Max. Temperature</p>
+            <p class="item-value">28°C</p>
+          </div>
+          <div class="item">
+            <p class="item-title">Min. Temperature</p>
+            <p class="item-value">28°C</p>
+          </div>
+          <div class="item">
+            <p class="item-title">Humidity</p>
+            <p class="item-value">86%</p>
+          </div>
+          <div class="item">
+            <p class="item-title">Wind</p>
+            <p class="item-value">86%</p>
+          </div>
+          <div class="item">
+            <p class="item-title">Cloudy</p>
+            <p class="item-value">86%</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="search-div">
+          <input class="search-bar" type="text" placeholder="Another location" />
+          <button>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="16px"
+              width="16px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="title">Forecast for the next seven days</div>
+        <div class="weekly">
+            <div class="card">
+                <p class="day">Sun</p>
+                <img src="https://openweathermap.org/img/wn/03d.png" alt="" class="icon">
+                <div class="temp-div">
+                    <p class="max">23°</p>
+                    <p class="min">13°</p>
+                </div>
+            </div>
+            <div class="card">
+                <p class="day">Sun</p>
+                <img src="https://openweathermap.org/img/wn/03d.png" alt="" class="icon">
+                <div class="temp-div">
+                    <p class="max">23°</p>
+                    <p class="min">13°</p>
+                </div>
+            </div>
+            <div class="card">
+                <p class="day">Sun</p>
+                <img src="https://openweathermap.org/img/wn/03d.png" alt="" class="icon">
+                <div class="temp-div">
+                    <p class="max">23°</p>
+                    <p class="min">13°</p>
+                </div>
+            </div>
+            <div class="card">
+                <p class="day">Sun</p>
+                <img src="https://openweathermap.org/img/wn/03d.png" alt="" class="icon">
+                <div class="temp-div">
+                    <p class="max">23°</p>
+                    <p class="min">13°</p>
+                </div>
+            </div>
+            <div class="card">
+                <p class="day">Sun</p>
+                <img src="https://openweathermap.org/img/wn/03d.png" alt="" class="icon">
+                <div class="temp-div">
+                    <p class="max">23°</p>
+                    <p class="min">13°</p>
+                </div>
+            </div>
+            <div class="card">
+                <p class="day">Sun</p>
+                <img src="https://openweathermap.org/img/wn/03d.png" alt="" class="icon">
+                <div class="temp-div">
+                    <p class="max">23°</p>
+                    <p class="min">13°</p>
+                </div>
+            </div>
+            <div class="card">
+                <p class="day">Sun</p>
+                <img src="https://openweathermap.org/img/wn/03d.png" alt="" class="icon">
+                <div class="temp-div">
+                    <p class="max">23°</p>
+                    <p class="min">13°</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

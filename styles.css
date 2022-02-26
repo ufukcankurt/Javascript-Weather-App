@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(14 18 27);
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: url("./img/5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container .left-side {
+  width: 65%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+}
+
+.left-side .general-info {
+  width: 35%;
+  height: 300px;
+  position: relative;
+  top: -85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+}
+
+.left-side .general-info .date-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left-side .general-info .date-div .img-div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 150px;
+}
+
+.left-side .general-info .date-div .img-div img {
+}
+
+.left-side .general-info .date-div .img-div h2 {
+}
+
+.left-side .general-info .date-div .date-info {
+}
+
+.left-side .general-info .date-div .date-info h2 {
+  font-size: 40px;
+}
+
+.left-side .general-info .date-div .date-info h3 {
+  font-size: 16px;
+}
+
+.left-side .general-info .temp {
+  font-size: 78px;
+  margin: 10px 0;
+}
+
+.left-side .general-info .city {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.left-side .detail-info {
+  width: 35%;
+  height: 300px;
+  position: relative;
+  top: -85px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 25px 40px;
+}
+
+.left-side .detail-info .title {
+  margin-bottom: 30px;
+}
+
+.left-side .detail-info .item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.left-side .detail-info .item .item-title {
+}
+
+.left-side .detail-info .item .item-value {
+}
+
+.container .right-side {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  /* backdrop-filter: blur(10px);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-color: rgba(0,0,0,0.3); */
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.right-side .search-div button{
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(140 140 140 / 60%);
+    /* backdrop-filter: blur(10px); */
+}
+
+.search-div {
+  margin: 50px auto 100px auto;
+}
+
+.search-div .search-bar {
+  width: 275px;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid gray;
+  color: white;
+}
+
+.search-div .search-bar::placeholder{
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.right-side .title {
+  color: gray;
+  font-weight: 700;
+  margin: 0 auto 40px auto;
+}
+
+.weekly {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.card .day {
+  font-weight: 700;
+}
+
+.card .icon {
+}
+
+.card .temp-div {
+  display: flex;
+  font-weight: 700;
+}
+
+.card .temp-div .max {
+}
+
+.card .temp-div .min {
+  margin-left: 15px;
+  color: gray;
+}
