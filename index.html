@@ -13,38 +13,40 @@
         <div class="general-info">
           <div class="date-div">
             <div class="img-div">
-              <img src="https://openweathermap.org/img/wn/03d.png" alt="" />
-              <h2>Rainy</h2>
+              <img src="" alt="" />
+              <h2></h2>
             </div>
             <div class="date-info">
-              <h2>Today</h2>
-              <h3>Sat, 3 Aug</h3>
+              <h2></h2>
+              <h3></h3>
             </div>
+            
           </div>
-          <div class="temp">28°C</div>
-          <div class="city">Berlin, Germany</div>
+          <p class="desciption"></p>
+          <div class="temp"></div>
+          <div class="city"></div>
         </div>
         <div class="detail-info">
           <h2 class="title">Weather Details</h2>
           <div class="item">
             <p class="item-title">Max. Temperature</p>
-            <p class="item-value">28°C</p>
+            <p id="max-temp" class="item-value"></p>
           </div>
           <div class="item">
             <p class="item-title">Min. Temperature</p>
-            <p class="item-value">28°C</p>
+            <p id="min-temp" class="item-value"></p>
           </div>
           <div class="item">
             <p class="item-title">Humidity</p>
-            <p class="item-value">86%</p>
+            <p id="humidity-value" class="item-value"></p>
           </div>
           <div class="item">
-            <p class="item-title">Wind</p>
-            <p class="item-value">86%</p>
+            <p class="item-title">Wind Speed</p>
+            <p id="wind-value" class="item-value"></p>
           </div>
           <div class="item">
             <p class="item-title">Cloudy</p>
-            <p class="item-value">86%</p>
+            <p id="cloudy-value" class="item-value"></p>
           </div>
         </div>
       </div>
@@ -69,7 +71,7 @@
         </div>
         <div class="title">Forecast for the next seven days</div>
         <div class="weekly">
-            <div class="card">
+            <!-- <div class="card">
                 <p class="day">Sun</p>
                 <img src="https://openweathermap.org/img/wn/03d.png" alt="" class="icon">
                 <div class="temp-div">
@@ -124,11 +126,13 @@
                     <p class="max">23°</p>
                     <p class="min">13°</p>
                 </div>
-            </div>
+            </div> -->
         </div>
       </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="./moment.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
