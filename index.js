@@ -14,9 +14,9 @@ window.addEventListener("load", function () {
 });
 
 let weather = {
-  openWeatherKey: "process.env.OPEN_WEATHER_KEY",
+  openWeatherKey: process.env.OPEN_WEATHER_KEY,
   mapBoxKey:
-    "process.env.MAX_BOX_KEY",
+    process.env.MAP_BOX_KEY,
   fetchMapBox: function (city, state = null) {
     fetch(
       "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
