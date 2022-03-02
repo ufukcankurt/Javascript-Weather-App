@@ -14,8 +14,8 @@ window.addEventListener("load", function () {
 });
 
 let weather = {
-  "openWeatherKey":process.env.OPEN_WEATHER_KEY,
-  "mapBoxKey":process.env.MAP_BOX_KEY,
+  "openWeatherKey":"68553e370099ee46420c352bd0db52e7",
+  "mapBoxKey":"pk.eyJ1IjoidWZ1a2Nhbmt1cnQiLCJhIjoiY2wwM3dqcGx1MDJuZjNlcGpqMnF4ODZnbSJ9.v_OiBbqbzx9adR_udEsktg",
   fetchMapBox: function (city, state = null) {
     fetch(
       "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
