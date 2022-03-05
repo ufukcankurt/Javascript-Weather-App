@@ -1,3 +1,5 @@
+
+//todo: Made the necessary definitions.
 const dayToday = moment().format("MMM Do");
 const dayTodayName = moment().format("dddd");
 const currentTime = moment().format("h:mm:ss a");
@@ -14,8 +16,10 @@ window.addEventListener("load", function () {
 });
 
 let weather = {
+  //todo: Created Keys
   "openWeatherKey":"68553e370099ee46420c352bd0db52e7",
   "mapBoxKey":"pk.eyJ1IjoidWZ1a2Nhbmt1cnQiLCJhIjoiY2wwM3dqcGx1MDJuZjNlcGpqMnF4ODZnbSJ9.v_OiBbqbzx9adR_udEsktg",
+  //todo: This function sends a request to Mapbox to get the "lat and long" of the entered city name.
   fetchMapBox: function (city, state = null) {
     fetch(
       "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
@@ -29,6 +33,7 @@ let weather = {
       })
       .catch(err => console.log(err))
   },
+  //todo: It gets the "lat and long" from Mapbox.
   getGeoCoding: function (data, state) {
     const { features } = data;
     const lat = features[0].center[1];
@@ -37,6 +42,7 @@ let weather = {
 
     this.fetchWeater(lat, lon, place_name, state);
   },
+  // todo: After we get "lat and long" we send request to openweatherapp
   fetchWeater: function (lat, lon, place_name, state) {
     fetch(
       "https://api.openweathermap.org/data/2.5/onecall?lat=" +
@@ -50,10 +56,11 @@ let weather = {
       .then((dataNext) => this.displayWeather(dataNext, place_name, state))
       .catch(err => console.log(err));
   },
+  // todo:: Create weather forecasts of the entered city in UI
   displayWeather: function (dataNext, place_name, state) {
     const { daily } = dataNext;
     for (let i = 0; i < 8; i++) {
-      // todo: get the TODAY weather forecast
+      // todo: Get the TODAY weather forecast
       if (i == 0) {
         const { icon, description, main } = dataNext.daily[i].weather[0];
         const { min, max } = dataNext.daily[i].temp;
@@ -84,7 +91,7 @@ let weather = {
         document.querySelector("#wind-value").innerHTML = wind_speed + " km/h";
         document.querySelector("#cloudy-value").innerHTML = clouds + " %";
       } else {
-        // todo: get forecast for the next seven days
+        // todo: Get forecast for the next seven days
 
         const weekly = document.querySelector(".weekly");
 
@@ -128,13 +135,13 @@ let weather = {
     }
     this.currentTemp(place_name);
   },
-
+//todo:: Get user input from input to search
   search: function () {
     const inputValue = document.querySelector(".search-div .search-bar");
     this.fetchMapBox(inputValue.value, (state = "change"));
     inputValue.value = "";
   },
-
+//todo:: Get current temperature 
   currentTemp: function (city) {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -152,7 +159,7 @@ let weather = {
       Math.trunc(temp) + "<span>°C</span>";
   },
 };
-
+//todo:: Updated the icons according to the weather
 const setIcon = (code, Attribute = null, iconDOM = null) => {
   if (Attribute == "today") {
     if (code == "01d") {
@@ -207,7 +214,7 @@ const setIcon = (code, Attribute = null, iconDOM = null) => {
     }
   }
 };
-
+//todo:: Updated the background image according to the weather
 const setBackground = (main) => {
   const containerDOM = document.querySelector(".container");
 
